@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "MyKrishi"
+description = "A mobile-first farm management app for Indian farmers to track crops, field activities, expenses, income, tasks, harvests, and farm health."
+version = "1.0.0"
+id = "artifacts/mykrishi"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 23384
+
+[services.development]
+run = "pnpm --filter @workspace/mykrishi run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/mykrishi", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/mykrishi/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "23384"
+BASE_PATH = "/"

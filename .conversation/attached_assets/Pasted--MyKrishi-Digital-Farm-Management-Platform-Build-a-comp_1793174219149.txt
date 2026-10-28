@@ -1,0 +1,336 @@
+# MyKrishi — Digital Farm Management Platform
+
+Build a complete, modern, mobile-first digital farm management web application named **MyKrishi**, designed for Indian farmers. This project is for the Agriculture & Rural Solutions track of the PromptWars × KickToTech 2026 Vibe Coding Hackathon.
+
+**Tagline:** Your Farm. Your Growth.
+
+## 1. Product vision
+
+MyKrishi is a digital farm manager, not a chatbot. It should help farmers manage their farms, fields, crops, daily agricultural activities, expenses, income, tasks, harvests, crop health observations, and government schemes from one easy-to-use application.
+
+The experience must be simple enough for a first-time smartphone user while remaining professional, useful, and technically well structured.
+
+## 2. Technology and architecture
+
+- Build a responsive full-stack-ready web application.
+- Use React and TypeScript where supported, with a clean, modular component architecture.
+- Use Tailwind CSS or an equivalent styling system.
+- Keep components reusable and separate the user interface, business logic, data models, and data-access layer.
+- Create centralized, strongly typed models for user profiles, farms, fields, crops, activities, expenses, tasks, harvests, government schemes, and notifications.
+- For the first phase, use realistic fictional demo data and local persistence where appropriate.
+- Structure the project so a real backend such as Supabase or Firebase can be integrated later.
+- Do not require real API keys or external credentials to run the initial demo.
+- Do not pretend that cloud synchronization, AI analysis, push notifications, or live government scheme verification works unless it has actually been implemented.
+
+## 3. Visual identity and design
+
+Create a polished Indian agritech product with a trustworthy, natural, modern appearance.
+
+Color palette:
+- Forest green for primary navigation and major actions.
+- Leaf green for highlights and positive indicators.
+- Warm cream or off-white for backgrounds.
+- Saffron or muted orange for selected accents.
+- Clear neutral colors for text, borders, and cards.
+
+Design requirements:
+- Mobile-first and responsive at widths of 320, 375, 390, and 430 pixels, as well as tablets and desktop screens.
+- Use readable typography, generous spacing, rounded cards, subtle shadows, and clear visual hierarchy.
+- Use agricultural icons and illustrations only where they improve usability.
+- Add tasteful transitions, loading states, empty states, and success/error feedback.
+- Respect reduced-motion preferences and provide accessible contrast, labels, and touch targets.
+- Avoid clutter, excessive gradients, oversized headings, and unnecessary decoration.
+- Prevent horizontal overflow on mobile devices.
+
+The final product should feel like a real, professionally designed agriculture technology startup application.
+
+## 4. Application navigation
+
+On mobile, create a persistent bottom navigation bar with five primary destinations:
+
+1. Home
+2. Crops
+3. Finance
+4. Tasks
+5. Profile
+
+Provide a prominent central or floating **+** action for quickly adding:
+- A crop
+- An expense
+- A farm activity
+- A harvest record
+
+On desktop, use a clean sidebar navigation with suitable icons.
+
+Include these destinations:
+- Dashboard
+- My Fields
+- My Crops
+- Farm Activities
+- Finance and Expenses
+- Tasks and Reminders
+- Harvest Records
+- Government Schemes
+- Crop Health
+- Notifications
+- Settings
+- Profile
+
+Every visible navigation item must work. If a feature is scheduled for a later phase, show a clear coming-soon state instead of a broken or dead button.
+
+## 5. Dashboard
+
+Build a useful dashboard that gives farmers an at-a-glance overview of their farm.
+
+Use fictional demonstration data for a farmer named **Ramesh Patil**, managing **Green Valley Farm** in a fictional demo village in Maharashtra, with a total farm area of **2.5 acres**.
+
+Include:
+- A personalized welcome message.
+- Current date.
+- Total farm area.
+- Number of active fields.
+- Active crops.
+- Upcoming tasks.
+- Recent farm activities.
+- Total expenses.
+- Total income, where available.
+- A simple profit/loss summary based on recorded demo transactions.
+- Crop and field overview cards.
+- Recent harvest summary.
+- Upcoming reminders.
+- Quick-action buttons.
+
+Use cotton and soybean as example crops. Clearly distinguish fictional demo data from real user data.
+
+The dashboard should contain useful information rather than decorative statistics that have no connection to the underlying records.
+
+## 6. Farm and field management
+
+Prepare the application structure for managing multiple farms and fields.
+
+Each field should support:
+- Field name.
+- Area and unit.
+- Location or village.
+- Soil type, if known.
+- Irrigation method, if known.
+- Notes.
+- Associated crops.
+- Field status.
+
+Users should eventually be able to create, view, edit, and delete field records, with appropriate validation and confirmation for destructive actions.
+
+## 7. Crop management
+
+Prepare crop management features with:
+- Crop name.
+- Associated field.
+- Sowing date.
+- Expected harvest date.
+- Crop season.
+- Cultivated area.
+- Crop growth stage.
+- Current status.
+- Notes.
+
+Include example cotton and soybean records.
+
+Provide clear crop cards and detailed crop views. Design the data model so planting, growth, expenses, activities, and harvests can be connected to the correct crop and field.
+
+## 8. Farm activities
+
+Create a structured system for recording agricultural activities, including:
+- Sowing.
+- Irrigation.
+- Fertilizer application.
+- Pesticide application.
+- Weeding.
+- Pruning.
+- Soil preparation.
+- Other activities.
+
+Each activity should eventually support a date, associated field or crop, description, quantity where relevant, cost, and notes.
+
+Provide a clean activity history and a quick-add workflow.
+
+## 9. Finance and expenses
+
+Build a farm finance section that can track agricultural expenses and income.
+
+Expense categories may include:
+- Seeds.
+- Fertilizers.
+- Pesticides.
+- Labour.
+- Irrigation.
+- Equipment.
+- Transport.
+- Other expenses.
+
+Income categories may include:
+- Crop sales.
+- Harvest sales.
+- Other farm income.
+
+Show:
+- Total expenses.
+- Total income.
+- Net balance based on recorded transactions.
+- Transaction history.
+- Category breakdowns.
+- Date and category filters.
+
+Use Indian rupees (₹) for currency display. Calculate totals from the underlying transaction records rather than hardcoding summary figures.
+
+## 10. Tasks and reminders
+
+Provide a task-management system for farm work.
+
+Each task should support:
+- Title.
+- Description.
+- Due date.
+- Priority.
+- Related crop or field.
+- Status: pending, completed, or overdue where applicable.
+
+Allow users to add, edit, complete, and delete tasks. Show upcoming tasks clearly and provide appropriate empty states.
+
+Do not claim that real push notifications are enabled until an actual notification system is connected.
+
+## 11. Harvest management
+
+Prepare a harvest-record system that supports:
+- Crop.
+- Field.
+- Harvest date.
+- Quantity harvested.
+- Unit.
+- Quality or grade, if known.
+- Selling price, if applicable.
+- Total sale value.
+- Notes.
+
+Ensure harvest and income records can be related without accidentally counting the same sale twice.
+
+## 12. Government schemes
+
+Include a dedicated Government Schemes section intended to help Indian farmers discover relevant agricultural support programs.
+
+Prepare scheme cards and a structure for:
+- Scheme name.
+- Description.
+- Eligibility criteria.
+- Benefits.
+- Required documents.
+- Application instructions.
+- Official source URL.
+- Last-verified date, where available.
+
+Prioritize official Indian government sources. Clearly label sample or unverified information. Do not invent current eligibility rules, deadlines, benefits, or official links. The interface must distinguish verified information from demo content.
+
+## 13. Crop health
+
+Prepare a Crop Health section where farmers can record crop observations.
+
+Support a future workflow for:
+- Selecting a crop or field.
+- Describing visible symptoms.
+- Attaching a photograph.
+- Recording the observation date.
+- Saving recommendations or follow-up notes.
+
+Keep the architecture ready for a future AI-assisted crop-health feature, but do not present simulated AI results as real diagnoses.
+
+## 14. Multilingual support
+
+Design the application for ten languages:
+1. English.
+2. Marathi.
+3. Hindi.
+4. Gujarati.
+5. Punjabi.
+6. Bengali.
+7. Tamil.
+8. Telugu.
+9. Kannada.
+10. Malayalam.
+
+Start with complete English interface text and establish a centralized internationalization system. Implement Marathi as the first additional language, then structure the remaining translations so they can be added consistently.
+
+Avoid hardcoding interface text across components. Keep translation keys organized and make the language selector accessible from the profile or settings area.
+
+Changing the language should update supported interface text consistently.
+
+## 15. Profile and settings
+
+Provide a profile screen for farmer information, including:
+- Farmer name.
+- Village and district.
+- State.
+- Preferred language.
+- Farm information.
+
+Include settings for language and other supported preferences.
+
+Use fictional demo information initially. Do not request unnecessary sensitive personal information.
+
+## 16. Data integrity and usability
+
+- Use shared data models and a consistent data-access layer.
+- Keep dashboard totals consistent with the corresponding crop, task, harvest, and transaction records.
+- Validate forms and provide useful error messages.
+- Provide loading, empty, success, and error states.
+- Make destructive actions clear and confirm them where appropriate.
+- Ensure forms work on small screens.
+- Keep demo data clearly identified.
+- Avoid duplicate records when performing updates.
+- Ensure that every visible button has a meaningful action.
+- Preserve user-entered demo data across refreshes when local persistence is supported.
+
+## 17. Hackathon quality requirements
+
+The application should be suitable for a live hackathon demonstration.
+
+Prioritize:
+- A polished first impression.
+- A clear farmer-centered workflow.
+- Functional navigation.
+- Useful dashboard information.
+- Consistent visual design.
+- Responsive behavior.
+- Accessible interactions.
+- Maintainable code.
+- A clear path toward backend integration and AI-assisted features.
+
+Do not sacrifice core functionality for decorative animations.
+
+## 18. Initial implementation scope
+
+Build the initial working application shell first:
+- Branding and responsive layout.
+- Mobile bottom navigation and desktop sidebar.
+- Dashboard with fictional demo data.
+- Reusable cards, buttons, form controls, and page layouts.
+- Initial pages for crops, finance, tasks, and profile.
+- Navigation to the other planned sections.
+- Centralized typed data models and data-access architecture.
+- English interface text and the foundation for multilingual support.
+- Local persistence for the initial demo where appropriate.
+
+Do not attempt to integrate every external service in this first pass. Make the foundation reliable so additional features can be implemented in later steps.
+
+## 19. Final checks
+
+Before finishing the first implementation:
+- Run the available build or validation checks.
+- Fix obvious runtime errors and broken navigation.
+- Verify the layout on mobile and desktop sizes.
+- Check that the mobile layout does not scroll horizontally.
+- Verify that the dashboard renders with demo data.
+- Verify that visible controls have meaningful behavior.
+- Confirm that the project is structured for future backend integration.
+
+Finally, summarize what is implemented, what is using demo data, and what remains for later phases. Do not claim a feature is complete unless it has actually been implemented and tested.
+
+**Build MyKrishi as a real, working digital farm manager—not merely a static landing page or a chatbot.**

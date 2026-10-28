@@ -1,6 +1,6 @@
-# [Project name]
+# MyKrishi
 
-_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
+A mobile-first farm manager for Indian farmers to track fields, crops, activities, finances, tasks, harvests, and crop observations.
 
 ## Run & Operate
 
@@ -22,15 +22,17 @@ _Replace the heading above with the project's name, and this line with one sente
 
 ## Where things live
 
-_Populate as you build — short repo map plus pointers to the source-of-truth file for DB schema, API contracts, theme files, etc._
+- `artifacts/mykrishi/src/App.tsx` — app shell, routes, screens, and English/Marathi interface text
+- `artifacts/mykrishi/src/lib/farmData.ts` — typed farm models, fictional demo records, and local persistence
 
 ## Architecture decisions
 
-_Populate as you build — non-obvious choices a reader couldn't infer from the code (3-5 bullets)._
+- Initial demo data is fictional and stored in the current browser with localStorage.
+- No cloud sync, AI crop diagnosis, live scheme verification, or push notifications are claimed.
 
 ## Product
 
-_Describe the high-level user-facing capabilities of this app once they exist._
+MyKrishi gives farmers a simple place to review farm activity and manage crop, field, finance, task, harvest, and observation records. English and Marathi are supported in the initial interface; other planned languages are marked as coming soon.
 
 ## User preferences
 
